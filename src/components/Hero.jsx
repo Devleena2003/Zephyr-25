@@ -3,6 +3,7 @@ import React from "react";
 import CountdownTimer from "./Countdown";
 import { motion } from "framer-motion";
 import heroBgVideo from "../assets/herobg.mp4";
+import heroBgVideo2 from "../assets/herobg2.mp4"
 // --- IMPORTANT ---
 // Replace this with the actual path to your background video
 
@@ -24,14 +25,14 @@ const HeroSection = () => {
         loop
         muted
         playsInline // Important for mobile playback
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1] opacity-100"
         src={heroBgVideo}
       >
         Your browser does not support the video tag.
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+      <div className="absolute inset-0 bg-opacity-60 z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
