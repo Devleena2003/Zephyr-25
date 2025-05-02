@@ -45,7 +45,7 @@ const HeroSection = () => {
           <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
             Zephyr
           </span>
-          2025
+          {/* 2025 */}
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200"

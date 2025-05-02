@@ -42,7 +42,7 @@ const CountdownTimer = ({ targetDate }) => {
     timerComponents.push(
       <motion.div
         key={interval}
-        className="text-center bg-transparent border-red-500 bg-opacity-20 backdrop-blur-sm rounded-lg p-4 mx-2 shadow-lg min-w-[80px]"
+        className="text-center bg-transparent border border-white/50 bg-opacity-20 backdrop-blur-sm rounded-lg p-4 mx-2 shadow-lg min-w-[80px]"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

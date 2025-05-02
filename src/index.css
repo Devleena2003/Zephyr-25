@@ -124,3 +124,79 @@ html {
   font-weight: 900;
   font-style: italic;
 }
+
+/* src/index.css */
+
+/* ... (keep existing imports/styles like @import url(...), @import "tailwindcss", body styles) ... */
+
+/* ================================= */
+/* Vertical Honeycomb Grid Styles */
+/* ================================= */
+@layer components {
+  .honeycomb-grid-container {
+    --hexagon-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0;
+    column-gap: 0;
+  }
+
+  .h-hexagon {
+    width: var(--hexagon-width);
+    height: calc(var(--hexagon-width) * 0.866); /* width * sqrt(3)/2 */
+    background-color: #e8b7b7;
+    clip-path: polygon(
+      25% 0%, 75% 0%,
+      100% 50%,
+      75% 100%, 25% 100%,
+      0% 50%
+    );
+    margin: calc(var(--hexagon-width) * 0.02);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .h-hexagon:nth-child(odd) {
+    margin-top: calc(var(--hexagon-width) * 0.333); /* half of height */
+  }
+
+  .h-hexagon img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    top: 0;
+    left: 0;
+  }
+
+  .h-hexagon:hover {
+    transform: scale(1.05) rotateZ(1deg);
+    z-index: 10;
+    filter: brightness(1.1);
+  }
+
+  .h-hexagon:hover img {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive width settings */
+@media (min-width: 640px) {
+  .honeycomb-grid-container {
+    --hexagon-width: 160px;
+  }
+}
+@media (min-width: 1024px) {
+  .honeycomb-grid-container {
+    --hexagon-width: 180px;
+  }
+}
+@media (min-width: 1280px) {
+  .honeycomb-grid-container {
+    --hexagon-width: 200px;
+  }
+}

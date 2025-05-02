@@ -26,6 +26,12 @@ const events = [
     description: "Showcasing style and confidence.",
   },
   {
+    name: "Fitoor",
+    icon: MusicalNoteIcon,
+    description: "Rocking tunes and raw energy.",
+  },
+
+  {
     name: "Live Band",
     icon: MusicalNoteIcon,
     description: "Rocking tunes and raw energy.",
