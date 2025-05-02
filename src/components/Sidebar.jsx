@@ -2,7 +2,7 @@
 import React from "react";
 import { XMarkIcon } from "@heroicons/react/24/solid"; // Close Icon
 import { motion } from "framer-motion";
-
+import logo from "../assets/logo.png"; // Logo image
 const Sidebar = ({ isOpen, onMenuToggle }) => {
   const sidebarVariants = {
     open: { x: 0, transition: { type: "tween", stiffness: 100 } },
@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, onMenuToggle }) => {
         className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-6 z-40 shadow-lg md:hidden`} // Use Framer Motion for animation
       >
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-xl font-semibold">Menu</h2>
+          <img className="h-20 w-20" src={logo} />
           <button
             onClick={onMenuToggle}
             className="focus:outline-none hover:text-purple-300"
