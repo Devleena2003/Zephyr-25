@@ -8,14 +8,12 @@ const Footer = () => {
     <footer className="bg-gray-900 text-gray-400 py-8 px-4">
       <div className="container mx-auto text-center">
         <p className="mb-2 text-lg font-semibold text-purple-300">
-          Un-filtered Hall Day '24
+          Zephyr 2025
         </p>
         <p className="text-sm">
-          © {currentYear} [Your Hostel Name Here]. All Rights Reserved.
+          © {currentYear} Pritilata Chhatrinibas. All Rights Reserved.
         </p>
-        <p className="text-xs mt-2">
-          Website crafted with ❤️ for an awesome Hall Day!
-        </p>
+        <p className="text-xs mt-2">Website crafted with ❤️!</p>
         {/* Optional: Add social links or contact info here */}
         <div className="mt-4 flex justify-center space-x-4">
           {/* Example Links - Replace # with actual links */}
@@ -37,7 +35,6 @@ const Footer = () => {
               />
             </svg>
           </a>
-
 
           {/* Add more social icons (Facebook, Twitter, etc.) */}
         </div>

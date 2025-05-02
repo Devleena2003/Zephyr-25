@@ -1,106 +1,120 @@
 // EventsSection.jsx
-import React, { useRef } from "react";
+import React from "react";
+
+// Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
+
+// Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+import "swiper/css/autoplay";
 
-import {
-  MusicalNoteIcon,
-  FilmIcon,
-  UserGroupIcon,
-  SparklesIcon,
-  SpeakerWaveIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/24/outline";
+// (Icons are no longer needed here)
 
+// Updated event data (from Step 2)
 const events = [
   {
     name: "Group Dance",
-    icon: UserGroupIcon,
+    imageUrl: "/images/Group-dance-6.png",
     description: "Energetic crew performances.",
   },
   {
     name: "Drama",
-    icon: FilmIcon,
+    imageUrl: "/images/events/drama.jpg",
     description: "Compelling stories brought to life.",
   },
   {
     name: "Ramp Walk",
-    icon: SparklesIcon,
+    imageUrl: "/images/Ramp-walk-4.jpg",
     description: "Showcasing style and confidence.",
   },
   {
     name: "Fitoor",
-    icon: MusicalNoteIcon,
+    imageUrl: "/images/Fitoor-1.jpg",
     description: "Rocking tunes and raw energy.",
   },
   {
-    name: "Live Band",
-    icon: MusicalNoteIcon,
+    name: "Live Music",
+    imageUrl: "/images/band-2.png",
     description: "Feel the beat live and loud.",
   },
   {
     name: "DJ Night",
-    icon: SpeakerWaveIcon,
+    imageUrl: "/images/events/dj.jpg",
     description: "Dance till you drop!",
   },
 ];
 
 const EventsSection = () => {
-  const swiperRef = useRef(null);
-
   return (
-    <section id="events" className="py-16 md:py-24 px-4 bg-white">
+    <section
+      id="events"
+      className="py-16 md:py-24 px-4 bg-gradient-to-b from-gray-50 to-purple-50 overflow-hidden"
+    >
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800">
+        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-16 text-gray-800">
           Event Lineup
         </h2>
 
-        <div className="relative max-w-5xl mx-auto">
-          {/* Navigation Buttons */}
-          <button
-            onClick={() => swiperRef.current?.slidePrev()}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border rounded-full shadow hover:bg-gray-100"
-          >
-            <ChevronLeftIcon className="h-6 w-6 text-gray-800" />
-          </button>
+        <Swiper
+          // Swiper config (keep as before)
+          modules={[Navigation, EffectCoverflow, Autoplay]}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          navigation={true}
+          slidesPerView={"auto"} // Let's try auto again
+          breakpoints={{
+            320: { slidesPerView: 1.3, spaceBetween: 15 },
+            640: { slidesPerView: 2.5, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+          }}
+          className="!pb-12 !pt-4"
+        >
+          {events.map((event, index) => (
+            <SwiperSlide
+              key={index}
+              // --- Styling for the Slide with Background Image ---
+              className="group relative rounded-2xl overflow-hidden shadow-xl min-h-[380px] bg-cover bg-center"
+              // Apply background image dynamically using inline style (safe for dynamic URLs)
+              style={{ backgroundImage: `url(${event.imageUrl})` }}
+            >
+              {/* --- Overlay for Text Readability --- */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent rounded-2xl transition-colors duration-300 group-hover:from-black/80 group-hover:via-black/60"></div>
 
-          <button
-            onClick={() => swiperRef.current?.slideNext()}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border rounded-full shadow hover:bg-gray-100"
-          >
-            <ChevronRightIcon className="h-6 w-6 text-gray-800" />
-          </button>
-
-          {/* Swiper Carousel */}
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={30}
-            centeredSlides={true}
-            slidesPerView={window.innerWidth < 768 ? 1.2 : 2.5}
-            loop={true}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            className="px-10"
-          >
-            {events.map((event) => (
-              <SwiperSlide
-                key={event.name}
-                className="w-[220px] h-[320px] bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105 flex items-center justify-center"
-              >
-                <div className="flex flex-col items-center">
-                  <event.icon className="h-12 w-12 text-purple-600 mb-4" />
-                  <h3 className="text-lg font-semibold mb-2 text-gray-800 text-center">
-                    {event.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm text-center">{event.description}</p>
-                </div>
-              </SwiperSlide>
-
-            ))}
-          </Swiper>
-        </div>
+              {/* --- Text Content Container --- */}
+              {/* Positioned relative to sit above the overlay */}
+              <div className="relative z-[1] h-full flex flex-col justify-end p-6 text-white">
+                {/* Removed icon */}
+                <h3 className="text-xl font-bold mb-2 drop-shadow-md">
+                  {" "}
+                  {/* Bolder font, drop shadow */}
+                  {event.name}
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-200 drop-shadow-md">
+                  {" "}
+                  {/* Lighter text, drop shadow */}
+                  {event.description}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

@@ -64,7 +64,7 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-gray-800"
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 md:mb-16 text-gray-800"
         >
           Glimpses & Memories
         </motion.h2>

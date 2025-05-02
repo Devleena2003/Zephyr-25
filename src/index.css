@@ -200,3 +200,40 @@ html {
     --hexagon-width: 200px;
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  /* Use Tailwind colors via CSS variables */
+  --swiper-navigation-color: theme('colors.purple.600'); /* Arrow color */
+  --swiper-navigation-size: 20px; /* Size of the arrow */
+
+  /* Custom background and shape */
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border-radius: 20%;
+  width: 100px; /* Button width */
+  height: 100px; /* Button height */
+  box-shadow: theme('boxShadow.md');
+  transition: background-color 0.2s ease-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+   
+   --swiper-navigation-color: theme('colors.purple.800');
+}
+
+/* Adjust position slightly if needed */
+.swiper-button-prev {
+  left: 10px; /* Default is 10px */
+}
+.swiper-button-next {
+  right: 10px; /* Default is 10px */
+}
+
+/* Hide arrows on smaller screens if desired */
+@media (max-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    /* display: none; */ /* Uncomment to hide */
+  }
+}
