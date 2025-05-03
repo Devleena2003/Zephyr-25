@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // --- IMPORTANT ---
 // Replace with your actual image path in the public folder
-const aboutImageUrl = "/images/about_placeholder.jpg"; // Use your actual image path
+const aboutImageUrl = "/images/Group-dance-2.jpg"; // Use your actual image path
 
 // --- Framer Motion Variants for Heading Animation ---
 const headingContainerVariants = {
@@ -37,7 +37,7 @@ const AboutSection = () => {
     // The section itself doesn't need motion, the inner elements handle it
     <section
       id="about"
-      className="py-16 md:py-24 px-4 bg-white overflow-hidden"
+      className="py-16 md:py-24 px-4 bg-black overflow-hidden"
     >
       {" "}
       {/* Added overflow-hidden */}
@@ -71,53 +71,58 @@ const AboutSection = () => {
             // Apply container variants to orchestrate word animation
             variants={headingContainerVariants}
             // Large text size, adjust leading if needed
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-900 leading-tight"
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-500 leading-tight"
           >
             {/* Animate "About " */}
-            <motion.span className="inline-block" variants={wordVariants}>
+            <motion.span
+              className="inline-block bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
+              variants={wordVariants}
+            >
               About
             </motion.span>
 
-            {/* Animate "Zephyr" */}
+            {/* Animate "Zephyr"
             <motion.span
-              className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 relative"
+              className="inline-block bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800
+  relative"
               variants={wordVariants}
             >
               Zephyr
               {/* Animated Underline (Optional but nice) */}
-              {/* <motion.span
+            {/* <motion.span
                 className="absolute bottom-[-4px] left-0 h-1 bg-gradient-to-r from-purple-500 to-pink-500" // Adjusted position/thickness
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 0.9, ease: "easeOut", delay: 1.0 }} // Delay after text appears
               /> */}
-            </motion.span>
+            {/* </motion.span> */}
           </motion.h2>
 
           {/* Paragraphs with subtle staggered fade-in using existing container */}
           {/* Note: Changed h3 back to p - assuming it was a paragraph */}
           <motion.p
-            className="text-gray-700 mb-4 leading-relaxed text-lg" // Slightly larger text
-            variants={wordVariants} // Reuse word variant for simple fade/slide up
+            className="text-gray-500 mb-5 leading-relaxed text-lg" // Increased bottom margin
+            variants={wordVariants}
           >
-            This year's Hall Day theme, "Un-filtered," celebrates authenticity,
-            raw talent, and genuine moments. We're stripping away the pretense
-            and focusing on the real energy and spirit of our hostel community.
+            Zephyr marks the much-anticipated Annual Hall Day and Reunion
+            celebration of Pritilata Chhatrinibas, the vibrant girls' hostel at
+            Kalyani Government Engineering College.
           </motion.p>
           <motion.p
-            className="text-gray-700 mb-4 leading-relaxed text-lg"
-            variants={wordVariants} // Reuse variant
+            className="text-gray-500 mb-5 leading-relaxed text-lg"
+            variants={wordVariants}
           >
-            Expect performances that are passionate, decor that's creatively
-            chaotic, and an atmosphere where everyone feels free to be
-            themselves. It's about showcasing who we are, without the edits or
-            enhancements.
+            It's a cherished tradition where current boaders showcase their
+            incredible talents and alumni return to reconnect, reminisce, and
+            celebrate the enduring bonds forged within our hostel walls.
           </motion.p>
           <motion.p
-            className="text-gray-700 leading-relaxed font-semibold text-lg" // Use font-semibold for emphasis
-            variants={wordVariants} // Reuse variant
+            className="text-gray-300 leading-relaxed font-semibold text-lg" // Kept emphasis
+            variants={wordVariants}
           >
-            Join us for a night that's unapologetically real and unforgettable!
+            Join us for an unforgettable evening filled with dazzling
+            performances, heartwarming reunions, and the unique spirit that
+            defines Pritilata Chhatrinibas!
           </motion.p>
         </motion.div>
       </div>

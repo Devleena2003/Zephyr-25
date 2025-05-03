@@ -14,19 +14,16 @@ const Navbar = ({ onMenuToggle }) => {
         </a>
         {/* Desktop Menu (Hidden for now, focus on sidebar for mobile-first) */}
         <div className="hidden md:flex space-x-6">
-          <a href="#hero" className="hover:text-purple-300 transition-colors">
+          <a href="#hero" className="hover:text-teal-300 transition-colors">
             Home
           </a>
-          <a href="#about" className="hover:text-purple-300 transition-colors">
+          <a href="#about" className="hover:text-teal-300 transition-colors">
             About
           </a>
-          <a
-            href="#gallery"
-            className="hover:text-purple-300 transition-colors"
-          >
+          <a href="#gallery" className="hover:text-teal-300 transition-colors">
             Gallery
           </a>
-          <a href="#events" className="hover:text-purple-300 transition-colors">
+          <a href="#events" className="hover:text-teal-300 transition-colors">
             Events
           </a>
         </div>
@@ -34,7 +31,7 @@ const Navbar = ({ onMenuToggle }) => {
         <div className="md:hidden">
           <button
             onClick={onMenuToggle}
-            className="text-white focus:outline-none hover:text-purple-300"
+            className="text-white focus:outline-none hover:text-teal-300"
             aria-label="Toggle menu"
           >
             <Bars3Icon className="h-7 w-7" />

@@ -51,10 +51,10 @@ const EventsSection = () => {
   return (
     <section
       id="events"
-      className="py-16 md:py-24 px-4 bg-gradient-to-b from-gray-50 to-purple-50 overflow-hidden"
+      className="py-16 md:py-24 px-4 bg-gradient-to-b from-black to-gray-900 overflow-hidden"
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-16 text-gray-800">
+        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-16 bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800">
           Event Lineup
         </h2>
 

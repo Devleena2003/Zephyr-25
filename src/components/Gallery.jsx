@@ -3,20 +3,23 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const galleryImages = [
-  "/images/gallery/placeholder1.jpg",
-  "/images/gallery/placeholder2.jpg",
-  "/images/gallery/placeholder3.jpg",
-  "/images/gallery/placeholder4.jpg",
-  "/images/gallery/placeholder5.jpg",
-  "/images/gallery/placeholder6.jpg",
-  "/images/gallery/placeholder7.jpg",
-  "/images/gallery/placeholder8.jpg",
-  "/images/gallery/placeholder9.jpg",
-  "/images/gallery/placeholder10.jpg",
-  "/images/gallery/placeholder11.jpg",
-  "/images/gallery/placeholder12.jpg",
-  "/images/gallery/placeholder13.jpg",
-  "/images/gallery/placeholder14.jpg",
+  "/images/band-1.jpg",
+  "/images/emceeing-1.jpg",
+  "/images/Group-dance-2.jpg",
+  "/images/Group-dance-3.jpg",
+  "/images/Group-dance-4.jpg",
+  "/images/Group-dance-5.jpg",
+  "/images/Group-photo-1.jpg",
+  "/images/Group-dance.png",
+  "/images/Group-photo-5.jpg",
+  "/images/Group-photo-2.jpg",
+  "/images/Group-photo-3.jpg",
+  "/images/Group-photo-4.jpg",
+  "/images/Ramp-walk-1.jpg",
+  "/images/Ramp-walk-2.jpg",
+  "/images/Ramp-walk-3.jpg",
+  "/images/Ramp-walk-4.jpg",
+  "/images/Group-photo-6.jpg",
   "/images/gallery/placeholder15.jpg",
   "/images/gallery/placeholder13.jpg",
   "/images/gallery/placeholder14.jpg",
@@ -27,8 +30,6 @@ const galleryImages = [
   "/images/gallery/placeholder13.jpg",
   "/images/gallery/placeholder14.jpg",
   "/images/gallery/placeholder15.jpg",
-  "/images/gallery/placeholder13.jpg",
-  "/images/gallery/placeholder14.jpg",
   "/images/gallery/placeholder15.jpg",
 ];
 
@@ -56,7 +57,7 @@ const GallerySection = () => {
   return (
     <section
       id="gallery"
-      className="py-16 md:py-24 px-4 bg-gradient-to-b from-gray-100 to-gray-200 overflow-hidden"
+      className="py-16 md:py-24 px-4 bg-black overflow-hidden"
     >
       <div className="container mx-auto text-center">
         <motion.h2
@@ -64,7 +65,7 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 md:mb-16 text-gray-800"
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 md:mb-16 bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
         >
           Glimpses & Memories
         </motion.h2>

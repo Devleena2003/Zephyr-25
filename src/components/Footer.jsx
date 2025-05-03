@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-400 py-8 px-4">
       <div className="container mx-auto text-center">
-        <p className="mb-2 text-lg font-semibold text-purple-300">
+        <p className="mb-2 text-lg font-semibold bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800">
           Zephyr 2025
         </p>
         <p className="text-sm">

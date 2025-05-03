@@ -38,10 +38,10 @@ const Loader = () => {
       </div>
       {/* Loading Text */}
       <p className="text-white text-xl font-semibold text-center px-4">
-        <span className="animate-pulse">Loading</span>
+        <span className="animate-pulse">Powering</span>
         <span className="animate-pulse" style={{ animationDelay: "0.2s" }}>
           {" "}
-          Un-filtered
+          Up the
         </span>
         <span className="animate-pulse" style={{ animationDelay: "0.4s" }}>
           {" "}

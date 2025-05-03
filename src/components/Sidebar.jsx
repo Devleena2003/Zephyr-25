@@ -24,13 +24,13 @@ const Sidebar = ({ isOpen, onMenuToggle }) => {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={sidebarVariants}
-        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-6 z-40 shadow-lg md:hidden`} // Use Framer Motion for animation
+        className={`fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-black to-gray-900  text-white p-6 z-40 shadow-lg md:hidden`} // Use Framer Motion for animation
       >
         <div className="flex justify-between items-center mb-8">
           <img className="h-20 w-30" src={logo} />
           <button
             onClick={onMenuToggle}
-            className="focus:outline-none hover:text-purple-300"
+            className="focus:outline-none hover:text-teal-300"
           >
             <XMarkIcon className="h-6 w-6" />
           </button>
@@ -39,28 +39,28 @@ const Sidebar = ({ isOpen, onMenuToggle }) => {
           <a
             href="#hero"
             onClick={onMenuToggle}
-            className="hover:text-purple-300 transition-colors py-2"
+            className="hover:text-teal-300 transition-colors py-2"
           >
             Home
           </a>
           <a
             href="#about"
             onClick={onMenuToggle}
-            className="hover:text-purple-300 transition-colors py-2"
+            className="hover:text-teal-300 transition-colors py-2"
           >
             About
           </a>
           <a
             href="#gallery"
             onClick={onMenuToggle}
-            className="hover:text-purple-300 transition-colors py-2"
+            className="hover:text-teal-300 transition-colors py-2"
           >
             Gallery
           </a>
           <a
             href="#events"
             onClick={onMenuToggle}
-            className="hover:text-purple-300 transition-colors py-2"
+            className="hover:text-teal-300 transition-colors py-2"
           >
             Events
           </a>

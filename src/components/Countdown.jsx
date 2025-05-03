@@ -50,7 +50,7 @@ const CountdownTimer = ({ targetDate }) => {
           delay: 0.2 + Object.keys(timeLeft).indexOf(interval) * 0.1,
         }}
       >
-        <span className="text-3xl md:text-4xl font-bold text-purple-300">
+        <span className="text-3xl md:text-4xl font-bold text-teal-300">
           {String(timeLeft[interval]).padStart(2, "0")}
         </span>
         <span className="block text-xs uppercase tracking-wider mt-1">

@@ -3,7 +3,7 @@ import React from "react";
 import CountdownTimer from "./Countdown";
 import { motion } from "framer-motion";
 import heroBgVideo from "../assets/herobg.mp4";
-import heroBgVideo2 from "../assets/herobg2.mp4"
+import heroBgVideo2 from "../assets/herobg2.mp4";
 // --- IMPORTANT ---
 // Replace this with the actual path to your background video
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-opacity-60 z-0"></div>
+      <div className="absolute inset-0 bg-opacity-75 z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
@@ -42,7 +42,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-teal-100 via-teal-400 to-teal-900">
             Zephyr
           </span>
           {/* 2025 */}
@@ -53,8 +53,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Get ready for a night of raw talent, authentic vibes, and pure
-          celebration. No filters, just fun!
+          Feel the energy of Zephyr '25! Pritilata Chhatrinibas will ignite the
+          stage with talent, celebration, and unforgettable memories.
         </motion.p>
 
         <CountdownTimer targetDate={eventDate} />
