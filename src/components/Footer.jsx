@@ -7,13 +7,13 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-400 py-8 px-4">
       <div className="container mx-auto text-center">
-        <p className="mb-2 text-lg font-semibold bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800">
+        <h2 className="mb-2 text-lg font-semibold bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800">
           Zephyr 2025
-        </p>
+        </h2>
         <p className="text-sm">
           © {currentYear} Pritilata Chhatrinibas. All Rights Reserved.
         </p>
-        <p className="text-xs mt-2">Website crafted with ❤️!</p>
+        <p className="text-xs mt-2">Website crafted with ❤️</p>
         {/* Optional: Add social links or contact info here */}
         <div className="mt-4 flex justify-center space-x-4">
           {/* Example Links - Replace # with actual links */}

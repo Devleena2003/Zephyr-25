@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // --- IMPORTANT ---
 // Replace with your actual image path in the public folder
-const aboutImageUrl = "/images/Group-dance-2.jpg"; // Use your actual image path
+const aboutImageUrl = "/images/about.jpg"; // Use your actual image path
 
 // --- Framer Motion Variants for Heading Animation ---
 const headingContainerVariants = {

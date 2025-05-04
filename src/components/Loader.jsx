@@ -6,7 +6,7 @@ const logoUrl = "/images/zw.png"; // Example path
 
 const Loader = () => {
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-[#1a1a2e] via-gray-900 to-[#1a1a2e] flex flex-col justify-center items-center z-[9999]">
+    <div className="fixed inset-0 bg-gradient-to-b from-black to-gray-900 flex flex-col justify-center items-center z-[9999]">
       {" "}
       {/* Ensure highest z-index */}
       {/* Logo and Animated Rings Container */}
@@ -33,7 +33,7 @@ const Loader = () => {
         <img
           src={logoUrl}
           alt="Loading Logo"
-          className="relative z-10 w-20 h-20 md:w-24 md:h-24 object-contain animate-pulse-slow" // Apply slower pulse
+          className="relative z-10 w-50 h-50 md:w-24 md:h-24 object-contain animate-pulse-slow" // Apply slower pulse
         />
       </div>
       {/* Loading Text */}

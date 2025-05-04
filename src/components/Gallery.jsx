@@ -15,23 +15,42 @@ const galleryImages = [
   "/images/Group-photo-2.jpg",
   "/images/Group-photo-3.jpg",
   "/images/Group-photo-4.jpg",
-  "/images/Ramp-walk-1.jpg",
+  "/images/inaug-2.jpg",
   "/images/Ramp-walk-2.jpg",
   "/images/Ramp-walk-3.jpg",
   "/images/Ramp-walk-4.jpg",
   "/images/Group-photo-6.jpg",
-  "/images/gallery/placeholder15.jpg",
-  "/images/gallery/placeholder13.jpg",
-  "/images/gallery/placeholder14.jpg",
-  "/images/gallery/placeholder15.jpg",
-  "/images/gallery/placeholder13.jpg",
-  "/images/gallery/placeholder14.jpg",
-  "/images/gallery/placeholder15.jpg",
-  "/images/gallery/placeholder13.jpg",
-  "/images/gallery/placeholder14.jpg",
-  "/images/gallery/placeholder15.jpg",
-  "/images/gallery/placeholder15.jpg",
+  "/images/band-4.jpg",
+  "/images/Group-dance-8.jpg",
+  "/images/fitoor-2.jpg",
+  "/images/Fitoor-3.jpg",
+  "/images/band-5.jpg",
+  "/images/groupfie.jpg",
+  "/images/inaug.jpg",
+  "/images/solo_dance.jpg",
+  "/images/Group-dance-1.jpg",
+  "/images/Group-photo-7.jpg",
+  "/images/Fitoor-5.jpg",
 ];
+
+const headingContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, // Adjust timing if needed
+      delayChildren: 0.2, // Delay after section starts appearing
+    },
+  },
+};
+const wordVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", damping: 15, stiffness: 100 },
+  },
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -61,13 +80,20 @@ const GallerySection = () => {
     >
       <div className="container mx-auto text-center">
         <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 md:mb-16 bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
+          variants={headingContainerVariants}
+          initial="hidden" // Use variants for orchestration
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          // transition={{ duration: 0.6 }}
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-500 leading-tight"
         >
-          Glimpses & Memories
+          <motion.span
+            className="inline-block relative bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
+            variants={wordVariants}
+          >
+            Glimpses & Memories
+          </motion.span>
+          {/* Animate "& Memories" */}
         </motion.h2>
 
         <motion.div

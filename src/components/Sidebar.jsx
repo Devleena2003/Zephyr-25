@@ -35,32 +35,32 @@ const Sidebar = ({ isOpen, onMenuToggle }) => {
             <XMarkIcon className="h-6 w-6" />
           </button>
         </div>
-        <nav className="flex flex-col space-y-4">
+        <nav className="flex flex-col pl-6 space-y-4">
           <a
             href="#hero"
             onClick={onMenuToggle}
-            className="hover:text-teal-300 transition-colors py-2"
+            className="text-xl hover:text-teal-300 transition-colors py-2"
           >
             Home
           </a>
           <a
             href="#about"
             onClick={onMenuToggle}
-            className="hover:text-teal-300 transition-colors py-2"
+            className="text-xl hover:text-teal-300 transition-colors py-2"
           >
             About
           </a>
           <a
             href="#gallery"
             onClick={onMenuToggle}
-            className="hover:text-teal-300 transition-colors py-2"
+            className="text-xl hover:text-teal-300 transition-colors py-2"
           >
             Gallery
           </a>
           <a
             href="#events"
             onClick={onMenuToggle}
-            className="hover:text-teal-300 transition-colors py-2"
+            className="text-xl hover:text-teal-300 transition-colors py-2"
           >
             Events
           </a>

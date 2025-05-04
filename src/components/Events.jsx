@@ -1,5 +1,6 @@
 // EventsSection.jsx
 import React from "react";
+import { motion } from "framer-motion";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,7 +23,7 @@ const events = [
   },
   {
     name: "Drama",
-    imageUrl: "/images/events/drama.jpg",
+    imageUrl: "/images/drama.jpg",
     description: "Compelling stories brought to life.",
   },
   {
@@ -42,10 +43,28 @@ const events = [
   },
   {
     name: "DJ Night",
-    imageUrl: "/images/events/dj.jpg",
+    imageUrl: "/images/dj.jpg",
     description: "Dance till you drop!",
   },
 ];
+const headingContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, // Adjust timing if needed
+      delayChildren: 0.2, // Delay after section starts appearing
+    },
+  },
+};
+const wordVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", damping: 15, stiffness: 100 },
+  },
+};
 
 const EventsSection = () => {
   return (
@@ -54,10 +73,22 @@ const EventsSection = () => {
       className="py-16 md:py-24 px-4 bg-gradient-to-b from-black to-gray-900 overflow-hidden"
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-16 bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800">
-          Event Lineup
-        </h2>
-
+        <motion.h2
+          variants={headingContainerVariants}
+          initial="hidden" // Use variants for orchestration
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          // transition={{ duration: 0.6 }}
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-500 leading-tight"
+        >
+          <motion.span
+            className="inline-block relative bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
+            variants={wordVariants}
+          >
+            Events Lineup
+          </motion.span>
+          {/* Animate "& Memories" */}
+        </motion.h2>
         <Swiper
           // Swiper config (keep as before)
           modules={[Navigation, EffectCoverflow, Autoplay]}
