@@ -38,7 +38,6 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-4">
         <motion.h1
           className="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 tracking-tight leading-[1.5]"
-
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -54,7 +53,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Feel the energy of Zephyr '25! Pritilata Chhatrinibas will ignite the
+          Feel the energy of Zephyr 2025! Pritilata Chhatrinibas will ignite the
           stage with talent, celebration, and unforgettable memories.
         </motion.p>
 

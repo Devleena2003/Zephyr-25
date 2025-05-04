@@ -33,7 +33,7 @@ const Loader = () => {
         <img
           src={logoUrl}
           alt="Loading Logo"
-          className="relative z-10 w-50 h-50 md:w-24 md:h-24 object-contain animate-pulse-slow" // Apply slower pulse
+          className="relative z-10 w-50 h-50  object-contain animate-pulse-slow" // Apply slower pulse
         />
       </div>
       {/* Loading Text */}

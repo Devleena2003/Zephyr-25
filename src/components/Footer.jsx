@@ -1,12 +1,34 @@
 // src/components/Footer.jsx
 import React from "react";
 
+import logo1 from "../assets/logo.png"; // Logo image
+import logo2 from "../assets/zephyr w.png";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-gray-400 py-8 px-4">
       <div className="container mx-auto text-center">
+        <div className="mb-6 flex justify-center items-center gap-4">
+          {" "}
+          {/* Added margin-bottom */}
+          {/* Logo 1 */}
+          <img
+            src={logo1}
+            alt="Pritilata Logo"
+            className="h-20 w-20" // Adjust size as needed
+          />
+          {/* Separator Line */}
+          <div className="h-15  mt-5 w-px bg-gray-600"></div>{" "}
+          {/* Adjust height and color */}
+          {/* Logo 2 */}
+          <img
+            src={logo2}
+            alt="Zephyr Logo"
+            className="h-20 w-25 mt-3" // Adjust size as needed
+          />
+        </div>
         <h2 className="mb-2 text-lg font-semibold bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800">
           Zephyr 2025
         </h2>

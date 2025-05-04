@@ -82,7 +82,7 @@ const EventsSection = () => {
           className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-500 leading-tight"
         >
           <motion.span
-            className="inline-block relative bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
+            className="mb-5 inline-block relative bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
             variants={wordVariants}
           >
             Events Lineup

@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 const galleryImages = [
   "/images/band-1.jpg",
-  "/images/emceeing-1.jpg",
+  "/images/ramp_2022.jpg",
   "/images/Group-dance-2.jpg",
   "/images/Group-dance-3.jpg",
   "/images/Group-dance-4.jpg",
   "/images/Group-dance-5.jpg",
   "/images/Group-photo-1.jpg",
   "/images/Group-dance.png",
-  "/images/Group-photo-5.jpg",
+  "/images/ranuka di.jpg",
   "/images/Group-photo-2.jpg",
   "/images/Group-photo-3.jpg",
   "/images/Group-photo-4.jpg",
   "/images/inaug-2.jpg",
-  "/images/Ramp-walk-2.jpg",
-  "/images/Ramp-walk-3.jpg",
-  "/images/Ramp-walk-4.jpg",
+  "/images/prachi_di.jpg",
+  "/images/batch_2024.jpg",
+  "/images/sayantani_bidisha_di.jpg",
   "/images/Group-photo-6.jpg",
   "/images/band-4.jpg",
   "/images/Group-dance-8.jpg",
@@ -88,7 +88,7 @@ const GallerySection = () => {
           className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-500 leading-tight"
         >
           <motion.span
-            className="inline-block relative bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
+            className="mb-5 inline-block relative bg-clip-text text-transparent  bg-gradient-to-r from-teal-200 via-teal-500 to-teal-800"
             variants={wordVariants}
           >
             Glimpses & Memories
