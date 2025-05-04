@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid"; // Hamburger Icon
-import logo from "../assets/zephyr w.png"; // Logo image
+import logo from "../assets/logo.png"; // Logo image
 const Navbar = ({ onMenuToggle }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-30 bg-black bg-opacity-50 backdrop-blur-sm text-white p-4 transition-all duration-300">
@@ -10,7 +10,7 @@ const Navbar = ({ onMenuToggle }) => {
           href="#hero"
           className="text-2xl font-bold tracking-tight hover:text-purple-300 transition-colors"
         >
-          <img className="h-15 w-20" src={logo} />
+          <img className="h-20 w-20" src={logo} />
         </a>
         {/* Desktop Menu (Hidden for now, focus on sidebar for mobile-first) */}
         <div className="hidden md:flex space-x-6">
