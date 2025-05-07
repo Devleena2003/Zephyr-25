@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import HeroSection from "./components/Hero";
 import AboutSection from "./components/About";
+import MerchandiseSection from "./components/Merchandise";
 import GallerySection from "./components/Gallery";
 import Footer from "./components/Footer";
 import EventsSection from "./components/Events";
@@ -51,6 +52,7 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <MerchandiseSection />
         <GallerySection />
         <EventsSection />
       </main>

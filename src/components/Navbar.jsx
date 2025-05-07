@@ -21,6 +21,12 @@ const Navbar = ({ onMenuToggle }) => {
           <a href="#about" className="hover:text-teal-300 transition-colors">
             About
           </a>
+          <a
+            href="#merchandise"
+            className="hover:text-teal-300 transition-colors"
+          >
+            Merchandise
+          </a>
           <a href="#gallery" className="hover:text-teal-300 transition-colors">
             Gallery
           </a>

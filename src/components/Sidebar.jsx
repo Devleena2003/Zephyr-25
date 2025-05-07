@@ -51,6 +51,13 @@ const Sidebar = ({ isOpen, onMenuToggle }) => {
             About
           </a>
           <a
+            href="#merchandise"
+            onClick={onMenuToggle}
+            className="text-xl hover:text-teal-300 transition-colors py-2"
+          >
+            Merchandise
+          </a>
+          <a
             href="#gallery"
             onClick={onMenuToggle}
             className="text-xl hover:text-teal-300 transition-colors py-2"
